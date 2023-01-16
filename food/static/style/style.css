@@ -1,0 +1,457 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  font-weight: normal;
+  margin: 0px;
+  background: none;
+  line-height: 1.2em;
+  letter-spacing: -0.02em;
+  font-family: "Playfair Display", serif;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6em;
+    font-weight: 400;
+    color: #555555;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+  
+
+.carousel{
+    position: relative;
+    border-radius: 50%;
+    height: 70vh;    
+}
+.carousel-indicators button{
+    background: #980a07;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.carousel-control-next{
+    color: white;
+    font-size: 1.5rem;
+    width: 5%;
+}
+
+.carousel-control-next:hover{
+    color: #980a07;
+    font-size: 2rem;
+    width: 5%;
+}    
+
+.carousel-control-prev{
+    color: white;
+    font-size: 1.5rem;
+    width: 5%;
+}
+
+.carousel-control-prev:hover{
+    color: #980a07;
+    font-size: 2rem;
+    width: 5%;
+}
+
+.carousel-caption{
+    text-align: center;
+}
+
+.carousel-caption h3{
+    color: red;
+    font-weight: bold;
+}
+
+.carousel-caption p{
+    color: #980a07;
+    font-weight: bold;
+    font-size: medium;
+}
+.carousel-inner{
+    height: 100%;    
+}
+
+.carousel-inner .carousel-item{
+    height: 100%;
+} 
+
+.carousel-inner .carousel-item img{
+    height: 80%;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 100;
+    background: #980a07;
+    color: #242424!important;
+}
+
+.navbar .navbar-toggler i{
+    color: gold;
+}
+
+.navbar .navbar-toggler{
+    border: 2px solid gold;
+}
+
+.navbar .navbar-toggler:focus{
+    border: 3px solid gold;
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar .navbar-brand{
+    color: white;
+    font-weight: bold;
+}
+
+.nav-item .dropdown-menu{
+    background: gold;
+    float: right;
+}
+
+.nav-item .dropdown-menu .dropdown-item{
+    text-decoration: none;
+    margin-left: 250px
+}
+
+.nav-item .dropdown-menu .dropdown-item:hover{
+    text-decoration: none;
+    background: #980a07;
+    color: red;
+}
+
+.nav-item{
+    color: red ;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: gold;
+    border-bottom: 1px solid gold;
+    transition: all 300ms ease 0s;
+}
+
+.nav-link:focus{
+    color: gold;
+}
+
+.navbar .btn-hover{
+    color: white;
+    border: solid grey 2px;
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar .btn-hover:hover{
+    background: white;
+    color: rgb(199, 72, 72);
+}
+
+.order p, a{
+    color: white;
+}
+
+.order{
+    font-weight: bold;
+    line-height: .3rem;
+    padding-bottom: .5rem;
+}
+
+.ordern{
+    text-decoration: none;
+}
+
+.ordern:hover{
+    color: gold;
+}
+
+.map iframe{
+    width: 100%;
+    height: 50vh;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.card-body a{
+    background: #a40301;
+    color: white;
+    border: none;
+}
+
+.card-body .btn:hover{
+    background: gold;
+    color: #a40301;
+    font-weight: 600;
+}
+
+/* styling contact */
+#contact{
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.contact{
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: 3rem;
+}
+
+.form{
+    box-shadow: 5px 10px 30px 5px #555555;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
+    border-radius: 10%;
+    color: #555555;
+}
+
+.form form{
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.form div{
+    margin-top: .7rem;
+    margin-bottom: .7rem;
+}
+
+.form input[type="text"],
+.form input[type="email"]{
+    height: 2.5rem;
+    width: 100%;
+    padding-left: 1rem;
+    border: none; 
+    border-radius: 20rem;
+    background: beige;
+}
+
+.form input[type="text"],.form input[type="email"]:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.form input[type="submit"]:hover{
+    background: gold;
+    color: #980a07;
+    border: none;
+}
+
+.form input[type="submit"]{
+    background: #980a07;
+    color: white;
+    border: none;
+}
+
+form button[type="submit"]:hover{
+    background: gold;
+    color: #980a07;
+    border: none;
+}
+
+form button[type="submit"]{
+    background: #980a07;
+    color: white;
+    border: none;
+}
+
+.form textarea{
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border: none;
+    background: beige;
+}
+
+
+.form textarea:focus{
+    background: beige;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.cap{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #a40301;
+    color: white;
+}
+
+/* shopcart */
+.table-box input[type="number"]{
+    color: red;
+    text-align: center;
+    outline: none;
+    border: 3px solid peachpuff;
+}
+
+.table-box tr{
+    color: crimson;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.table-box button{
+    border: none;
+}
+
+.table-box .fas{
+    color: crimson;
+}
+
+/* styling services */
+.first i{
+    font-size: 7rem;
+    color:rgb(26, 26, 105);
+    margin-bottom: 2rem;
+}
+
+.first h5{
+    margin-top: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    width: 90%;
+}
+
+.first{
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: white;
+    line-height: 12px;
+    border: 1px solid lightgrey;
+    text-align: center;
+}
+
+.first:hover{
+    background:rgb(236, 236, 236) ;
+}
+/* styling services done */
+
+/* styling callback */
+.callback a{
+    background: #a40301;
+    color: white;
+    text-transform: capitalize;
+    padding: .5rem;
+    text-decoration: none;
+    border-radius: 2rem;
+    width: 100%;
+}
+
+.callback a:hover{
+    background: gold;
+    color: #a40301;
+    font-weight: 600;
+}
+/* styling callback done */
+/* styling dashboard */
+.profile-form{
+    box-shadow: 5px 10px 30px 5px #555555;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
+    border-radius: 3rem;
+    color: #555555;
+}
+
+.profile-form form{
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-form input{
+    background: beige;
+    color: crimson;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.profile-form input:focus{
+    background: beige;
+    color: crimson;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.profile-form label{
+    color: crimson;
+    font-weight: 600;
+}
+/* styling dashboard done */
+
+/* checkout */
+.check-title{
+    text-align: center;
+    text-transform: capitalize;
+    color: silver;
+    font-weight: 900;
+}
+
+/* styling footer */
+
+.foota{
+    background: #555555;
+}
+
+.foota a{
+    color: white;
+}
+
+.foota a:hover{
+    color: gold;
+    letter-spacing: .5rem;
+}
+
+.foota i{
+    font-size: 2rem;
+}
+
+.foota img{
+    width: 20vh;
+}
+
+.img{
+    width: 100%;
+    height: 20rem;
+} 

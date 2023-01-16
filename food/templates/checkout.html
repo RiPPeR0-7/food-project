@@ -1,0 +1,26 @@
+{% load humanize %}
+
+{% if summary %}
+    {% for men in summary %}
+        <tr>
+            <td><img src="{{men.menu.img.url}}" style="width: 20px; height: 30px;"></td>
+            <td>{{men.price}}</td>
+            <td>{{men.quantity}}</td>
+            <td>{{men.amount}}</td>
+        </tr>
+    {% endfor %}
+{% endif %}
+
+
+<table  class="table">
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>total: {{tota|floatformat:2|intcomma}}</td>
+        </tr>
+    </tbody>
+</table>
+

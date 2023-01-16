@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+<!-- carousel -->
+{% block banner %}  {% include "banner.html" %}  {% endblock banner %}
+<!-- carousel done -->
+
+{% block content %}
+<!-- contact  -->
+<h1 class="cap">contact us</h1>
+<div class="container">
+    <div class="row justify-content-around">
+    <div class="col-10 col-sm-10 col-md-6 contact">
+        <h2 id="contact">Our Location</h2>
+        <p id="contact">Golden Dragon Nigeria Takeaway</p>
+        <p>28 Yunisa Adeniji Street, Lagos</p>
+        <p id="contact">Have any querry:</p>
+        <p>Call us on:+23490-3998-0621</p>
+    </div>
+    <div class="col-10 col-sm-10 col-md-6">
+        <div class="form">
+            <form action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+                <h2 id="contact">We Love To Hear From You</h2>
+                <P>
+                    Please use the form below to send us your 
+                    enquiry and we will be pleased to assist
+                    in any way that we can.
+                </P>
+                <div class="mb-3">
+                <input type="text" name="full_name" class="form-control" placeholder="Full Name" id="exampleInputText1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                <input type="email" name="email" class="form-control" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                <textarea name="message" class="form-control" placeholder="Message" id="" cols="30" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning text-white">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-12 col-sm-12 col-lg-12">
+        <div class="row map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1871.7106718030939!2d7.113328891212017!3d6.261529333623782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104378b880a5ddf7%3A0x322d9c616bcde9fa!2s7467%2BCM4%2C%20420116%2C%20Egbagu!5e0!3m2!1sen!2sng!4v1660556922212!5m2!1sen!2sng"style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- contact done -->
+  {% endblock content %}
+
+<!-- footer -->
+{% block footer %} {% include "footer.html" %} {% endblock footer %}
+<!-- footer done -->

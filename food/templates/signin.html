@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+<!-- carousel -->
+{% block banner %}  {% include "banner.html" %}  {% endblock banner %}
+<!-- carousel done -->
+
+{% block content %}
+<h1 class="cap">User Signin</h1>
+<div class="container mb-5">
+  <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-center gy-5 text-warning pt-5 pb-5">
+    <div class="col-10 col-sm-10 col-lg-6">
+      <div class="profile-form px-lg-5">
+        <form action="{% url 'signin' %}" method='POST'>
+          {% csrf_token %}
+          <div class="mb-2">
+            <div id="textHelp" class="form-text text-capitalize form-text">
+              to fast track your .transaction, kindly signin or signup.
+            </div>
+            <label for="exampleInputText1" class="form-label">Username</label>
+            <input type="text" name="username" class="form-control" id="exampleInputText1">
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+            <div id="textHelp" class="form-text text-capitalize mt-3 form-text">
+              Signin to your acount or signup to create one.
+            </div>
+          </div>
+          <button type="submit" class="btn btn-danger mt-4">Sign-in</button>
+        </form>
+        <!-- <a href="{% url 'signup' %}" type="submit" class="btn btn-danger mt-4">Sign-up</a> -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+<!-- footer -->
+{% block footer %} {% include "footer.html" %} {% endblock footer %}
+<!-- footer done -->

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Service{% endblock title %}
+
+{% block banner %} {% include 'banner.html' %} {% endblock banner %}
+
+{% block content %}
+  <!-- services  -->
+  <h1 class="cap">Services</h1>
+  <div class="first1">
+    <div class="container">
+      <div class="row mt-5 mb-5 justify-content-center gx-5">
+        <div class="col-10 col-sm-10 col-md-5 col-lg-3">
+          <div class="first">
+            <div>
+              <i class="fa-solid fa-stethoscope text-danger"></i>
+            </div>
+            <h2>Delivery</h2>
+            <h5>
+              We run a delivery service and deliver food
+              to within 2 miles of our takeaway when you 
+              order £12 or more.
+            </h5>
+          </div>
+        </div>
+        <div class="col-10 col-sm-10 col-md-5 col-lg-3">
+          <div class="first">
+            <div>
+              <i class="fa-solid fa-map-location-dot text-danger"></i>
+            </div>
+            <h2>Loyalty Card</h2>
+            <h5>
+              We offer our loyal customers a loyalty 
+              card and associated discounts to show our
+              appreciation.
+            </h5>
+          </div>
+        </div>
+        <div class="col-10 col-sm-10 col-md-5 col-lg-3">
+          <div class="first">
+            <div>
+              <i class="fa-solid fa-calendar text-danger"></i>
+            </div>
+            <h2>Online Ordering</h2>
+            <h5>
+              Place your order online with a few clicks 
+              using our online ordering service available
+              on both PC and mobile.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+<!-- services done -->
+{% endblock content %}
+
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}

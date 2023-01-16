@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} |Menu{% endblock title %}
+
+{% block banner %} {% include 'banner.html' %} {% endblock banner %}
+
+{% block content %}
+<h1 class="cap">Menu</h1>
+<div class="container">
+    <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-center gy-5 text-warning">
+        {% if menu %}
+            {% for item in menu %}
+            <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+                <div class="card">
+                    <img src="{{item.img.url}}" class="card-img-top rounded-top img mx-auto">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <p class="card-text">Price: ${{item.price}}</p>
+                        <p class="card-text text-truncate">Description: {{item.description}}</p>
+                        <a href="{% url 'details' item.id  %}" class="btn btn-warning text-white w-100">Buy</a>
+                     </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}
+
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}

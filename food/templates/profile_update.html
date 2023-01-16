@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+<!-- carousel -->
+{% block carousel %}  {% include "carousel.html" %}  {% endblock carousel %}
+<!-- carousel done -->
+
+{% block content %}
+  <!-- main content -->
+  <h1 class="cap">Profile Update</h1>
+  <div class="container mb-5">
+    <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-center gy-5 pb-5">
+      <div class="col-12 col-sm-12 col-lg-3 mt-5">
+        <div class="card border-0">
+          <img src="{{profile.pix.url}}" class="card-img-top rounded-circle mx-auto w-75 imge">
+          <div class="card-body">
+            <h5 class="card-title">Name: {{profile.first_name|title}}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-lg-6">
+        <div class="profile-form px-lg-5 text-start">
+          <form action="{% url 'profile_update' %}" method="POST" enctype= "multipart/form-data">
+            {% csrf_token %}multipart
+              <div class="form-group">
+                {{update}}
+              </div>
+            <button type="submit" class="btn btn-danger w-50">Update Profile</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-lg-3">
+        <ul class="list-unstyled callback">
+          <li class="mb-4"><a href="{% url 'index' %}">home</a></li>
+          <li class="mb-4"><a href="{% url 'menu' %}">menu</a></li>
+          <li class="mb-4"><a href="{% url 'profile' %}">profile</a></li>
+          <li class="mb-4"><a href="{% url 'password' %}">update password</a></li>
+          <li class="mb-4"><a href="#">transaction details</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <!-- main content done -->
+{% endblock content %}
+
+<!-- footer -->
+{% block footer %} {% include "footer.html" %} {% endblock footer %}
+<!-- footer done -->

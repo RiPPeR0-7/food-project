@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+<!-- carousel -->
+{% block banner %}  {% include "banner.html" %}  {% endblock banner %}
+<!-- carousel done -->
+
+{% block content %}
+  <!-- about  -->
+  <h1 class="cap">about us</h1>
+  <div class="container">
+    <div class="row justify-content-around gy-5">
+      <div class="col-10 col-sm-10 col-md-5 order-1 order-md-0">
+        <div class="text-dark mt-5">
+          <h2>
+            Some Words About Us
+            & Our Fast Food
+          </h2>
+          <p>
+            CHOW CHOW restaurant and take away was 
+            established in 2007 and we have built a reputation
+            for the fresh taste of our food and our in-house and
+            take away service. 
+          </p>
+          <p>
+            Quality Chinese cuisine to enjoy in our restaurant 
+            or take away. We only use the best and freshest ingredients
+            to offer you the traditional tasty Chinese cuisines. 
+          </p>
+        </div>
+      </div>
+      <div class="col-10 col-sm-10 col-md-5 order-0 order-md-1">
+        <div class="image d-flex justify-content-center px-auto">
+          <img src="../static/img/chef1.jpg" class="rounded-circle mx-auto w-50 mb-5 imge">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about done -->
+
+{% endblock content %}
+
+<!-- footer -->
+{% block footer %} {% include "footer.html" %} {% endblock footer %}
+<!-- footer done -->

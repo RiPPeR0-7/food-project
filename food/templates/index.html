@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+<!-- carousel -->
+{% block carousel %}  {% include "carousel.html" %}  {% endblock carousel %}
+<!-- carousel done -->
+
+{% block content %}
+        <!-- main content  -->
+        <!-- breakfast content  -->
+        <h1 class="cap">Breakfast</h1>
+        <div class="container">
+            <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-center gy-5 mb-5 text-dark">
+              {% if breakfast %}
+                {% for break in breakfast %}
+              <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+                <div class="card">
+                  <img src="{{break.img.url}}" class="card-img-top img">
+                  <div class="card-body">
+                    <h5 class="card-title text-capitalize">Name: {{break.title}}</h5>
+                    <p class="card-text">Price: ${{break.price}}</p>
+                    <p class="card-text text-truncate">Description: {{break.description}}</p>
+                    <a href="{% url 'menu' %}" class="btn btn-warning text-white w-100">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+          <!-- breakfast content done -->
+        <!-- lunch content  -->
+        <h1 class="cap">Lunch</h1>
+        <div class="container">
+            <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-center gy-5 mb-5 text-dark">
+              {% if lunch %}
+                {% for lun in lunch %}
+              <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+                <div class="card">
+                  <img src="{{lun.img.url}}" class="card-img-top img">
+                  <div class="card-body">
+                    <h5 class="card-title text-capitalize">Name: {{lun.title}}</h5>
+                    <p class="card-text">Price: ${{lun.price}}</p>
+                    <p class="card-text text-truncate">Description: {{lun.description}}</p>
+                    <a href="{% url 'menu' %}" class="btn btn-warning text-white w-100">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+          <!-- lunch content done -->
+        <!-- dinner content  -->
+        <h1 class="cap">dinner</h1>
+        <div class="container">
+            <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-center gy-5 mb-5 text-dark">
+              {% if dinner %}
+                {% for din in dinner %}
+              <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+                <div class="card">
+                  <img src="{{din.img.url}}" class="card-img-top img">
+                  <div class="card-body">
+                    <h5 class="card-title text-capitalize">Name: {{din.title}}</h5>
+                    <p class="card-text">Price: ${{din.price}}</p>
+                    <p class="card-text text-truncate">Description: {{din.description}}</p>
+                    <a href="{% url 'menu' %}" class="btn btn-warning text-white w-100">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+          <!-- dinner content done -->
+        <!-- dessert content  -->
+        <h1 class="cap">dessert</h1>
+        <div class="container">
+            <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-center gy-5 mb-5 text-dark">
+              {% if dessert %}
+                {% for des in dessert %}
+              <div class="col-10 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+                <div class="card">
+                  <img src="{{des.img.url}}" class="card-img-top img rounded-top">
+                  <div class="card-body">
+                    <h5 class="card-title text-capitalize">Name: {{des.title}}</h5>
+                    <p class="card-text">Price: ${{des.price}}</p>
+                    <p class="card-text text-truncate">Description: {{des.description}}</p>
+                    <a href="{% url 'menu' %}" class="btn btn-warning text-white w-100">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+          <!-- dessert content done -->
+          <!-- main content done -->
+    
+{% endblock content %}
+
+
+<!-- footer -->
+{% block footer %} {% include "footer.html" %} {% endblock footer %}
+<!-- footer done -->

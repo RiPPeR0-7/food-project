@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+<!-- banner -->
+{% block banner %}  {% include "banner.html" %}  {% endblock banner %}
+<!-- banner done -->
+
+{% block content %}
+  <!-- main content -->
+  <h1 class="cap">{{profile.user.username}}'s Profile</h1>
+  <div class="container mb-5">
+    <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-center gy-5 pb-5">
+      <div class="col-12 col-sm-12 col-lg-3 mt-5">
+        <div class="card border-0">
+          <img src="{{profile.pix.url}}" class="card-img-top rounded-circle mx-auto w-75 imge">
+          <div class="card-body">
+            <h5 class="card-title">Name: {{profile.first_name|title}} {{profile.last_name|title}}</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-12 col-lg-6">
+        <div class="profile-form px-lg-5 text-start">
+          <form action="{% url 'profile' %}" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="exampleInputText1" class="form-label">First Name</label>
+              <input type="text" value="{{profile.first_name}}" class="form-control" id="exampleInputText1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputText1" class="form-label">Last Name</label>
+              <input type="text" value="{{profile.last_name}}" class="form-control" id="exampleInputText1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email Address</label>
+              <input type="email" value="{{profile.email}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputText1" class="form-label">Phone</label>
+              <input type="text" value="{{profile.phone}}" class="form-control" id="exampleInputText1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputText1" class="form-label">Address</label>
+              <input type="text" value="{{profile.address}}" class="form-control" id="exampleInputText1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputText1" class="form-label">State</label>
+              <input type="text" value="{{profile.state}}" class="form-control" id="exampleInputText1">
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <div class="col-12 col-sm-12 col-lg-3">
+        <ul class="list-unstyled callback">
+          <li class="mb-4"><a href="{% url 'index' %}">home</a></li>
+          <li class="mb-4"><a href="{% url 'menu' %}">Menu</a></li>
+          <li class="mb-4"><a href="{% url 'profile_update' %}">profile Update</a></li>
+          <li class="mb-4"><a href="{% url 'password' %}">update password</a></li>
+          <li class="mb-4"><a href="#">transaction history</a></li>
+        </ul>
+    </div>
+    </div>
+  </div>
+    <!-- main content done -->
+{% endblock content %}
+
+<!-- footer -->
+{% block footer %} {% include "footer.html" %} {% endblock footer %}
+<!-- footer done -->

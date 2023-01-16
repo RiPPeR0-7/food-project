@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+<!-- carousel -->
+{% block banner %}  {% include "banner.html" %}  {% endblock banner %}
+<!-- carousel done -->
+
+{% block content %}
+<div class="container mb-5">
+    <h1 class="cap">Transaction Complete</h1>
+    <div class="row justify-content-center justify-content-md-around justify-content-lg-center text-center gy-5 text-warning pt-5 pb-5">
+      <div class="col-12 col-sm-12 col-md-3 col-lg-3 d-none d-lg-block">
+        <div class="card border-0">
+          <img src="{{profile.pix.url}}" class="card-img-top rounded-circle mx-auto w-75 imge">
+          <div class="card-body">
+            <h5 class="card-title">Name: {{profile.user.username}}</h5>
+          </div>
+        </div>
+      </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-6">
+            <h3>Dear {{profile.first_name}}, your transaction is successful!</h3>
+            <h5>Thank you for your patronage.</h5>
+            <h6>We hope you shop again.</h6>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 d-none d-lg-block">
+            <ul class="list-unstyled callback">
+                <li class="mb-4"><a href="{% url 'index' %}">home</a></li>
+                <li class="mb-4"><a href="{% url 'menu' %}">menu</a></li>
+                <li class="mb-4"><a href="{% url 'profile' %}">profile</a></li>
+                <li class="mb-4"><a href="{% url 'password' %}">update password</a></li>
+                <li class="mb-4"><a href="#">transaction details</a></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  
+{% endblock content %}
+
+<!-- footer -->
+{% block footer %} {% include "footer.html" %} {% endblock footer %}
+<!-- footer done -->

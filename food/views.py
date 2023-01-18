@@ -37,6 +37,7 @@ def menu(request):
     }
     return render(request, 'menu.html', context)
 
+@login_required(login_url='signin')
 def details(request, id):
     detail = Menu.objects.get(pk=id)
     context = {
@@ -91,7 +92,6 @@ def signup(request):
 def signout(request):
     logout(request)
     return redirect('signin')
-
 
 def signin(request):
     if request.method == 'POST':
@@ -155,6 +155,7 @@ def password(request):
     }
     return render(request, 'password.html',context)
 
+@login_required(login_url='signin')
 def shopcart(request):
     if request.method == 'POST':
         quant = int(request.POST['quantity'])
@@ -202,6 +203,7 @@ def shopcart(request):
 
     return redirect('menu')
 
+@login_required(login_url='signin')
 def displaycart(request):
     trolley = Shopcart.objects.filter(user__username = request.user.username, paid=False)
     profile=Profile.objects.get(user__username = request.user.username)
@@ -227,6 +229,7 @@ def displaycart(request):
 
     return render(request, 'displaycart.html', context)
 
+@login_required(login_url='signin')
 def deleteitem(request):
     item_id = request.POST['item_id']
     item_delete = Shopcart.objects.get(pk=item_id)
@@ -234,6 +237,7 @@ def deleteitem(request):
     messages.success(request, 'Item deleted successfully.')
     return redirect('displaycart')
 
+@login_required(login_url='signin')
 def increase(request):
     if request.method== 'POST':
         the_item = request.POST['itemid']
@@ -263,8 +267,6 @@ class CheckoutView(View):
             'summary':summary
         }
         return render(request, 'checkout.html', context)
-#shopcart done
-
 
 def pay(request):
     if request.method == 'POST':

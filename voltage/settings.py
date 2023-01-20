@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-xj!ra_w7fbdsx94witks$!gxn0j1qm8yt3v0hyp819&7$co9h=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['54.210.102.232','*']
+ALLOWED_HOSTS = ['54.210.102.232', '*']
 
 
 # Application definition
@@ -108,19 +108,21 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Africa/Lagos'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = False
+USE_TZ = True
 
+SITE_ID = 2
+LOGIN_REDIRECT_URL = '/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR/ 'home/static')
-STATICFILES_DIR = os.path.join(BASE_DIR/ 'home/static')
+STATIC_ROOT = os.path.join(BASE_DIR/ 'static')
+STATICFILES_DIR = [os.path.join(BASE_DIR, 'home/static')]
 
 MEDIA = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

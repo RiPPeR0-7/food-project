@@ -1,111 +1,48 @@
 <!-- carousel  -->
 <div class="container-fluid">
     <div id="carouselExampleDark" class="carousel slide justify-content-center" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner text-warning">
-            <div class="carousel-item active" data-bs-interval="10000">
-                <img src="../static/img/sliderimg1m.png" class="d-block w-25">
-                <div class="carousel-caption">
-                    <h3>Fresh Noodles</h3>
-                    <p>With bacon, tasty ham, pineapple and onion</p>
-                </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="../static/img/sliderimg2m.png" class="d-block" alt="...">
-                <div class="carousel-caption">
-                    <h3>Spring Roll</h3>
-                    <p>Vegetable and Yam Spring roll.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../static/img/sliderimg3m.png" class="d-block" alt="...">
-                <div class="carousel-caption">
-                    <h3>Chinesse Rice</h3>
-                    <p>Order online for free delivery.</p>
-                </div>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" class=" d-sm-none d-md-block" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" class=" d-sm-none d-md-block" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner text-warning">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="../static/img/sliderimg1m.png" class="mt-5">
+            <div class="carousel-caption">
+                <h3>Fresh Noodles</h3>
+                <p>With bacon, tasty ham, pineapple and onion</p>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
-            <span class="visually-hidden">Previous</span>
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
-            <span class="visually-hidden">Next</span>
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="{% url 'index' %}"><img src="../static/img/logo-sml.png" width="100"
-                        alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about' %}">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'menu' %}">Menu</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                User
-                            </a>
-                            <ul class="dropdown-menu my-2" aria-labelledby="navbarDropdown">
-                                {% if user.is_authenticated %}
-                                <li><a class="dropdown_item" href="{% url 'displaycart' %}">Shopcart
-                                        {% if cartread > 0 %}
-                                        <span class="badge rounded-pill bg-warning text-dark">{{cartread}}</span>
-                                        {% else %}
-                                        <span class="badge rounded-pill bg-warning text-dark">0</span>
-                                        {% endif %}
-                                    </a></li>
-                                <li><a class="dropdown_item" href="{% url 'profile' %}">Profile</a></li>
-                                <li><a class="dropdown_item" href="{% url 'signout' %}">Signout</a></li>
-                                {% else %}
-                                <li><a class="dropdown_item" href="{% url 'signup' %}">Signup</a></li>
-                                <li><a class="dropdown_item" href="{% url 'signin' %}">Signin</a></li>
-                                {% endif %}
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'services' %}">Services</a>
-                        </li>
-                    </ul>
-                    <div class="d-grid order border-start">
-                        <p class="ms-2">Order Now</p>
-                        <a href="#" class="ordern ms-2">+234-907-4248262</a>
-                    </div>
-                </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="../static/img/sliderimg2m.png" class="mt-5" alt="...">
+            <div class="carousel-caption">
+                <h3>Spring Roll</h3>
+                <p>Vegetable and Yam Spring roll.</p>
             </div>
-        </nav>
+        </div>
+        <div class="carousel-item">
+            <img src="../static/img/sliderimg3m.png" class="mt-5" alt="...">
+            <div class="carousel-caption">
+                <h3>Chinesse Rice</h3>
+                <p>Order online for free delivery.</p>
+            </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+        <span class="visually-hidden">Previous</span>
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+        <span class="visually-hidden">Next</span>
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
-</div>
-{% if messages %}
-{% for item in messages %}
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>{{item}}</strong>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-{% endfor %}
-{% endif %}
-<!-- carousel done -->
+  </div>
+  <!-- carousel done -->
+  

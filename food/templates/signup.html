@@ -2,6 +2,10 @@
 
 {% block title %}Home{% endblock title %}
 
+<!-- header -->
+{% block header %}  {% include "header.html" %}  {% endblock header %}
+<!-- header done -->
+
 <!-- carousel -->
 {% block banner %}  {% include "banner.html" %}  {% endblock banner %}
 <!-- carousel done -->
@@ -19,31 +23,31 @@
               To get 5% discount and fast track your transaction, kindly signup.
             </div>
             <label for="exampleInputText1" class="form-label">Username</label>
-            <input type="text" name='username' class="form-control" id="exampleInputText1">
+            <input type="text" name='username' class="form-control text-capitalize" id="exampleInputText1">
           </div>
           <div class="mb-3">
             <label for="exampleInputText1" class="form-label">First Name</label>
-            <input type="text" name='first_name' class="form-control" id="exampleInputText1">
+            <input type="text" name='first_name' class="form-control text-capitalize" id="exampleInputText1">
           </div>
           <div class="mb-3">
             <label for="exampleInputText1" class="form-label">Last Name</label>
-            <input type="text" name='last_name' class="form-control" id="exampleInputText1">
+            <input type="text" name='last_name' class="form-control text-capitalize" id="exampleInputText1">
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email Address</label>
-            <input type="email" name='email' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" name='email' class="form-control text-capitalize" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
           <div class="mb-3">
             <label for="exampleInputText1" class="form-label">Phone</label>
-            <input type="text" name='phone' class="form-control" id="exampleInputText1">
+            <input type="text" name='phone' class="form-control text-capitalize" id="exampleInputText1">
           </div>
           <div class="mb-3">
             <label for="exampleInputText1" class="form-label">Address</label>
-            <input type="text" name='address' class="form-control" id="exampleInputText1">
+            <input type="text" name='address' class="form-control text-capitalize" id="exampleInputText1">
           </div>
           <div class="mb-3">
             <label for="exampleInputText1" class="form-label">State</label>
-            <input type="text" name="state" class="form-control" id="exampleInputText1">
+            <input type="text" name="state" class="form-control text-capitalize" id="exampleInputText1">
             <input type="hidden" name="pix" value='profile/jeff.jpg' class="form-control" id="exampleInputText1">
           </div>
           <div class="mb-2">

@@ -2,6 +2,10 @@
 
 {% block title %}Home{% endblock title %}
 
+<!-- header -->
+{% block header %}  {% include "header.html" %}  {% endblock header %}
+<!-- header done -->
+
 <!-- carousel -->
 {% block banner %}  {% include "banner.html" %}  {% endblock banner %}
 <!-- carousel done -->
@@ -19,7 +23,7 @@
               to fast track your .transaction, kindly signin or signup.
             </div>
             <label for="exampleInputText1" class="form-label">Username</label>
-            <input type="text" name="username" class="form-control" id="exampleInputText1">
+            <input type="text" name="username" class="form-control text-capitalize" id="exampleInputText1">
           </div>
           <div class="mb-2">
             <label for="exampleInputPassword1" class="form-label">Password</label>

@@ -1,6 +1,7 @@
 import uuid
 import json
 import os
+import random
 import requests
 
 from django.shortcuts import render, HttpResponse, redirect
@@ -13,6 +14,16 @@ from django.views.generic import View
 from . forms import *
 from . models import *
 
+def generate_random_menus(menus, num_of_menus=4):
+    """
+        this generates random menus to be rendered
+        menus: the menus to be rendered
+        num_of_menus: the number of menus to be rendered
+    """
+    menus = list(menus)
+    random_menus = random.sample(menus, k=num_of_menus)
+    return random_menus
+
 # Create your views here.
 def index(request):
     breakfast = Menu.objects.filter(breakfast=True)
@@ -21,10 +32,10 @@ def index(request):
     dessert = Menu.objects.filter(dessert=True)
 
     context = {
-        'breakfast' : breakfast,
-        'lunch': lunch,
-        'dinner': dinner,
-        'dessert': dessert,
+        'breakfast' : generate_random_menus(breakfast),
+        'lunch': generate_random_menus(lunch),
+        'dinner': generate_random_menus(dinner),
+        'dessert':generate_random_menus(dessert),
     }
 
     return render(request, 'index.html', context)
